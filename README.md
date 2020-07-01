@@ -1,1 +1,1 @@
-"Prueba técinca Angular" 
+"Prueba técnica Angular" 
