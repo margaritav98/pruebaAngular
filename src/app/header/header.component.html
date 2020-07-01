@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-content">
+    <a class="navbar-brand" href="https://metrocuadrado.com/">
+      <img
+        src="../../assets/recursos/logo_metrocuadrado@2x.png"
+        class="logo"
+        alt=""
+      />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">BUSCAR INMUEBLE</a>
+          <div class="select">
+            <img
+              src="../../assets/recursos/select_arrow.png"
+              class="selector"
+              alt=""
+            />
+          </div>
+        </li>
+        <li class="nav-item" (click)="mostrarMenu(1)">
+          <a class="nav-link" href="#">NOTICIAS Y TENDENCIAS</a>
+          <div class="select">
+            <img
+              src="../../assets/recursos/select_arrow.png"
+              class="selector"
+              alt=""
+            />
+          </div>
+        </li>
+        <li class="nav-item" (click)="mostrarMenu(2)">
+          <a class="nav-link" href="#">HERRAMIENTAS</a>
+          <div class="select">
+            <img
+              src="../../assets/recursos/select_arrow.png"
+              class="selector"
+              alt=""
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <form class="form-inline">
+      <button
+        class="btn bg-transparent text-dark"
+        type="button"
+        style="font-weight: 500;"
+      >
+        INGRESAR
+      </button>
+      <button class="btn btn-sm btn-primary boton" type="button">
+        PUBLICA TU INMUEBLE
+      </button>
+    </form>
+  </div>
+</nav>
+<div *ngIf="noticias == true">
+  <app-selector-noticias  (click)="ocultar()"></app-selector-noticias>
+</div>
+<div *ngIf="herramientas == true">
+  <app-selector-herramientas (click)="ocultar()"></app-selector-herramientas>
+</div>
